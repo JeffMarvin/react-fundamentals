@@ -18,15 +18,17 @@
 <!--   💰 document.getElementById('root') -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
 <html>
-  <head>
-    <script type="module">
-      const myDiv = document.createElement('div');
-      myDiv.textContent = "Hello World";
-      myDiv.className = "container";
-      document.getElementById('root').append(myDiv);
-    </script>
-  </head>
   <body>
-    <div id="root"></div>
+  <script type="module">
+    const myRoot = document.createElement('div');
+    myRoot.setAttribute('id', "root");
+    document.body.appendChild(myRoot);
+
+    const myDiv = document.createElement('div');
+    myDiv.textContent = "Hello World";
+    myDiv.className = "container";
+    document.getElementById('root').append(myDiv);
+  </script>
+
   </body>
 </html>
